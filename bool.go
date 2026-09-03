@@ -7,6 +7,13 @@ func BoolToString(v bool) string {
 	return "false"
 }
 
+func BoolToStringOmitEmpty(v bool) string {
+	if v {
+		return "true"
+	}
+	return ""
+}
+
 func BoolToUInt8(v bool) uint8 {
 	if v {
 		return 1
