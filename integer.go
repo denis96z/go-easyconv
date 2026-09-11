@@ -9,20 +9,55 @@ func IntToString(v int) string {
 	return strconv.Itoa(v)
 }
 
+func IntToStringOmitEmpty(v int) string {
+	if v == 0 {
+		return ""
+	}
+	return IntToString(v)
+}
+
 func Int8ToString(v int8) string {
 	return formatInt(int64(v))
+}
+
+func Int8ToStringOmitEmpty(v int8) string {
+	if v == 0 {
+		return ""
+	}
+	return Int8ToString(v)
 }
 
 func Int16ToString(v int16) string {
 	return formatInt(int64(v))
 }
 
+func Int16ToStringOmitEmpty(v int16) string {
+	if v == 0 {
+		return ""
+	}
+	return Int16ToString(v)
+}
+
 func Int32ToString(v int32) string {
 	return formatInt(int64(v))
 }
 
+func Int32ToStringOmitEmpty(v int32) string {
+	if v == 0 {
+		return ""
+	}
+	return Int32ToString(v)
+}
+
 func Int64ToString(v int64) string {
 	return strconv.FormatInt(v, 10)
+}
+
+func Int64ToStringOmitEmpty(v int64) string {
+	if v == 0 {
+		return ""
+	}
+	return Int64ToString(v)
 }
 
 func formatInt(v int64) string {
@@ -33,20 +68,55 @@ func UIntToString(v uint) string {
 	return formatUInt(uint64(v))
 }
 
+func UIntToStringOmitEmpty(v uint) string {
+	if v == 0 {
+		return ""
+	}
+	return UIntToString(v)
+}
+
 func UInt8ToString(v uint8) string {
 	return formatUInt(uint64(v))
+}
+
+func UInt8ToStringOmitEmpty(v uint8) string {
+	if v == 0 {
+		return ""
+	}
+	return UInt8ToString(v)
 }
 
 func UInt16ToString(v uint16) string {
 	return formatUInt(uint64(v))
 }
 
+func UInt16ToStringOmitEmpty(v uint16) string {
+	if v == 0 {
+		return ""
+	}
+	return UInt16ToString(v)
+}
+
 func UInt32ToString(v uint32) string {
 	return formatUInt(uint64(v))
 }
 
+func UInt32ToStringOmitEmpty(v uint32) string {
+	if v == 0 {
+		return ""
+	}
+	return UInt32ToString(v)
+}
+
 func UInt64ToString(v uint64) string {
 	return formatUInt(v)
+}
+
+func UInt64ToStringOmitEmpty(v uint64) string {
+	if v == 0 {
+		return ""
+	}
+	return UInt64ToString(v)
 }
 
 func formatUInt(v uint64) string {
