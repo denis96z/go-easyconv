@@ -8,8 +8,22 @@ func Float32ToString(x float32) string {
 	return strconv.FormatFloat(float64(x), 'f', -1, 32)
 }
 
+func Float32ToStringOmitEmpty(v float32) string {
+	if v == 0 {
+		return ""
+	}
+	return Float32ToString(v)
+}
+
 func Float64ToString(x float64) string {
 	return strconv.FormatFloat(x, 'f', -1, 64)
+}
+
+func Float64ToStringOmitEmpty(v float64) string {
+	if v == 0 {
+		return ""
+	}
+	return Float64ToString(v)
 }
 
 func StringToFloat32(s string) (float32, error) {
