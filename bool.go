@@ -42,6 +42,20 @@ func BoolToUInt64(v bool) uint64 {
 	return 0
 }
 
+func BoolToFloat32(v bool) float32 {
+	if v {
+		return 1
+	}
+	return 0
+}
+
+func BoolToFloat64(v bool) float64 {
+	if v {
+		return 1
+	}
+	return 0
+}
+
 func BoolToIntString(v bool) string {
 	if v {
 		return "1"
